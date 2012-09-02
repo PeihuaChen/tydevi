@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project basedir="." default="all" name="all">
+
+	<!-- T A R G E T S -->
+
+	<target name="build">
+		<ant antfile="build.xml" inheritAll="true" />
+	</target>
+
+	<target name="jar">
+		<ant antfile="jar.xml" inheritAll="true" />
+	</target>
+
+	<target name="runnable">
+		<ant antfile="runnable.xml" inheritAll="true" />
+	</target>
+
+	<target name="doc">
+		<ant antfile="javadoc.xml" inheritAll="true" />
+	</target>
+
+	<target name="dist">
+		<ant antfile="dist.xml" inheritAll="true" />
+	</target>
+	
+	<target name="source">
+		<ant antfile="source.xml" inheritAll="true" />
+	</target>
+	
+	<!-- -->
+	
+	<target name="all" depends="build,jar,runnable,doc,dist,source">
+		<echo message="all done"/>
+	</target>
+
+</project>

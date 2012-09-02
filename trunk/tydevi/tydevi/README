@@ -1,0 +1,7 @@
+How to run:
+
+java -jar tydevi-runnable.jar
+
+How to get help on parameters:
+
+java -jar tydevi-runnable.jar -help

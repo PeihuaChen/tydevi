@@ -1,0 +1,39 @@
+<project name="Create Source Jar for Project tydevi" default="create_src_jar">
+    <!--ANT 1.7 is required                                        -->
+	
+	<property name="version" value="0.1.2" />
+	<property name="jar.name" value="tydevi-src.jar" />
+	
+    <target name="create_src_jar">
+    	<tstamp/>
+        <jar destfile="./${jar.name}">
+            <manifest>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Specification-Title" value="tydevi"/>
+                <attribute name="Specification-Version" value="${version}"/>
+                <attribute name="Specification-Vendor" value="Bernard Bou bbou@ac-toulouse.fr"/>
+                <attribute name="Implementation-Title" value="tydevi"/>
+                <attribute name="Implementation-Version" value="${version} ${TODAY}"/> 
+                <attribute name="Implementation-Vendor" value="Bernard Bou bbou@ac-toulouse.fr"/>
+            </manifest>
+            <fileset dir=".">
+				<include name="src/**/*"/>
+			</fileset>
+            <fileset dir=".">
+				<include name="*.xml"/>
+				<include name="*.txt"/>
+				<include name="*.launch"/>
+				<include name="jar-in-jar-loader.zip"/>
+				<include name=".project"/>
+				<include name=".classpath"/>
+				<include name=".settings"/>
+			</fileset>
+            <fileset dir=".">
+				<include name="tydevi/*"/>
+				<exclude name="tydevi/*.png"/>
+				<exclude name="tydevi/tydevi-runnable.jar"/>
+			</fileset>
+        </jar>
+    	<echo>done: source</echo>
+    </target>
+</project>

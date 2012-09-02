@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project name="create_javadoc" default="javadoc">
+    <target name="javadoc">
+        <javadoc access="private" author="true" classpath="/opt/devel/javalibs/stanfordparser/current/stanford-parser.jar" destdir="doc" doctitle="TyDeVi" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="tydevi,renderer" source="1.6" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+	<echo>done: javadoc</echo>
+</project>

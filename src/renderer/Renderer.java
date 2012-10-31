@@ -311,7 +311,7 @@ public class Renderer
 				}
 			}
 
-			// if candidate height does not conflict with any adge elect it
+			// if candidate height does not conflict with any edge elect it
 			if (!conflicts)
 				return thisCandidateHeight;
 		}

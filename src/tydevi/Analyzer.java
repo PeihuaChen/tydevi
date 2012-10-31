@@ -38,6 +38,8 @@ public class Analyzer
 				return thisStructure.typedDependenciesCCprocessed(true);
 			case CCPROCESSEDNOEXTRA:
 				return thisStructure.typedDependenciesCCprocessed(false);
+			default:
+				break;
 			}
 			return null;
 		}
